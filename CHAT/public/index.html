@@ -2,15 +2,28 @@
 <html>
   <head>
     <title>CHAT</title>
-    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" placeholder="Say Something..." autocomplete="off" /><button>Send</button>
-    </form>
-    <script src="/socket.io/socket.io.js"></script>
+    <ul class="pages">
+      <ul id="messages"></ul>
+      <form id="form" action="">
+        <div class="name">A</div>
+        <input id="input" placeholder="Message..." autocomplete="off" />
+        <button class="btn">Send</button>
+      </form>
+      <script src="/socket.io/socket.io.js"></script>
 
+      <div class="smiles">
+        <div class = 'smile' my-data-smile = '&#128512;'>&#128512;</div>
+        <div class = 'smile' my-data-smile = '&#127877;'>&#127877;</div>
+        <div class = 'smile' my-data-smile = '&#128534;'>&#128534;</div>
+        <div class = 'smile' my-data-smile = '&#129397;'>&#129397;</div>
+        <div class = 'smile' my-data-smile = '&#129297;'>&#129297;</div>
+        <div class = 'smile' my-data-smile = '&#128579;'>&#128579;</div>
+        <div class = 'smile' my-data-smile = '&#129313;'>&#129313;</div>
+      </div>
+    </ul>
     <script>
       var socket = io();
 
