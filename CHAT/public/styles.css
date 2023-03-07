@@ -5,7 +5,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-#form { 
+.form { 
     background: rgba(0, 106, 255, 0.2); 
     padding: 10px; 
     position: fixed; 
@@ -13,14 +13,26 @@
     left: 0; 
     right: 0; 
     display: flex; 
-    height: 60px; 
-    box-sizing: border-box; 
+    height: 60px;  
     backdrop-filter: blur(10px); 
     align-items: center;
 }
 
+.name{
+    height: 45px;
+    background: beige;
+    padding: 15px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    font-size: 14px;
+    font-weight: 300;
 
-#input {
+}
+
+.input {
     height: 45px;
     border-radius: 30px;
     border: none;
@@ -31,40 +43,37 @@
     outline: none;
 }
 
-#input:focus { 
-    outline: none; 
-}
-
-#form > button { 
-    background: #5666dc; 
-    border: none; 
-    padding: 0 1rem; 
-    margin: 0.25rem; 
-    border-radius: 10px; 
-    outline: none; 
-    color: #fff; 
-}
-
-#messages { 
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-}
-
-#messages > li { 
-    padding: 0.5rem 3rem; 
-}
-
-#messages > li:nth-child(odd) { 
-    background: #edebfd; 
-}
-
 .btn {
+    background: #2845bb;
+    border: none;
     width: 100px;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
+    color: white;
+    border-radius: 30px;
+}
+
+.messages { 
+    list-style: none; 
+    margin: 10px; 
+    padding: 0; 
+}
+
+.messages > li { 
+    padding: 10px; 
+    border-radius: 20px;
+    width: 500px;
+}
+
+.messages > li > span{ 
+    font-weight: 500;
+}
+
+.messages > li:nth-child(odd) {
+    background: #d9e1f9;
 }
 
 .smile {
@@ -76,30 +85,12 @@
 }
 
 .smiles {
-    bottom: 0;
-    height: 60px;
+    height: 30px;
     left: 0;
     outline: none;
     padding-left: 10px;
-    position: absolute;
+    position: fixed;
     right: 0;
-    bottom: 30px;
+    bottom: 60px;
     width: 100%;
-}
-
-ul {
-    list-style: none;
-    word-wrap: break-word;
-}
-
-.pages {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-li {
-    width: 500px;
-    margin: 20px;
 }

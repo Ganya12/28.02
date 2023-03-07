@@ -1,36 +1,22 @@
-const path=require("path");
-const http=require("http");
-const express=require('express');
-const socketio=require('socket.io');
+const express = require('express')
+const app = express()
+const http = require("http").createServer(app)
+const io = require('socket.io')(http)
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
+})
+app.use(express.static(__dirname + '/public'))
 
-
-const app=express();
-const server=http.createServer(app);
-const io=socketio(server);
-
-
-const port=process.env.PORT || 3000;
-const publicDirectoryPath=path.join(__dirname,"/public");
-
-
-app.use(express.static(publicDirectoryPath));
-
-
-io.on("connection",(client)=>{
-    console.log('New websocket connection');
- client.on('messageFromClient', msg => {
-    io.emit('messageFromServer', msg);
-  });
-   client.on('disconnect', () => {
-    console.log('New websocket disconnected');
-  });
+io.on('connection', (socket) => {
+  socket.on('chat message', (data) => {
+      io.emit("chat message", {
+        message: data.message,
+        name: data.name
+      })
+  })
 })
 
-server.listen(port,()=>{
-    console.log(`Server is up on port ${port}!`);
+http.listen(3000, () => {
+console.log('Server rabotaet');
 })
-
-let EmojiConvertor = require('emoji-js');
-
-let emoji = new EmojiConvertor();

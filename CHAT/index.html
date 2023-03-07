@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=dexice-width, inital-scale=1.0">
+    <title>CHAT</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <ul class="messages"></ul>
+      <form class="form" action="">
+        <div class="name"></div>
+        <input class="input" placeholder="Message..." autocomplete="off" />
+        <button class="btn">Send</button>
+      </form>
+    
+      <div class="smiles">
+        <div class = 'smile' my-data-smile = '&#128512;'>&#128512;</div>
+        <div class = 'smile' my-data-smile = '&#127877;'>&#127877;</div>
+        <div class = 'smile' my-data-smile = '&#128534;'>&#128534;</div>
+        <div class = 'smile' my-data-smile = '&#129397;'>&#129397;</div>
+        <div class = 'smile' my-data-smile = '&#129297;'>&#129297;</div>
+        <div class = 'smile' my-data-smile = '&#128579;'>&#128579;</div>
+        <div class = 'smile' my-data-smile = '&#129313;'>&#129313;</div>
+      </div>
+    </header>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
